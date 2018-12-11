@@ -16,10 +16,10 @@ ENV PHP_XDEBUG_PROFILER_OUTPUT_DIR ${PHP_XDEBUG_PROFILER_OUTPUT_DIR:-"/tmp"}
 
 LABEL Maintainer="Zaher Ghaibeh <z@zah.me>" \
       Description="Lightweight php 7.3 container based on alpine with xDebug enabled & composer installed." \
-      org.label-schema.name="zaherg/php-7.3-xdebug-alpine" \
+      org.label-schema.name="zaherg/php-xdebug-alpine" \
       org.label-schema.description="Lightweight php php 7.3 container based on alpine with xDebug enabled & composer installed." \
       org.label-schema.build-date=$BUILD_DATE \
-      org.label-schema.vcs-url="https://github.com/linuxjuggler/php-7.3-xdebug-alpine.git" \
+      org.label-schema.vcs-url="https://github.com/linuxjuggler/php-xdebug-alpine.git" \
       org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.schema-version="1.0.0"
 
@@ -31,7 +31,7 @@ RUN set -ex \
         libjpeg-turbo-dev g++ make autoconf libsodium-dev\
     && mkdir /src && cd /src && git clone https://github.com/xdebug/xdebug.git \
     && cd xdebug \
-    && sh ./rebuild.sh \    
+    && sh ./rebuild.sh \
     && docker-php-source extract \
     && pecl install redis libsodium \
     && docker-php-ext-enable xdebug redis sodium \

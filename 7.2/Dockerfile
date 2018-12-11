@@ -16,10 +16,10 @@ ENV PHP_XDEBUG_PROFILER_OUTPUT_DIR ${PHP_XDEBUG_PROFILER_OUTPUT_DIR:-"/tmp"}
 
 LABEL Maintainer="Zaher Ghaibeh <z@zah.me>" \
       Description="Lightweight php 7.2 container based on alpine with xDebug enabled & composer installed." \
-      org.label-schema.name="zaherg/php-7.2-xdebug-alpine" \
+      org.label-schema.name="zaherg/php-xdebug-alpine" \
       org.label-schema.description="Lightweight php 7.2 container based on alpine with xDebug enabled & composer installed." \
       org.label-schema.build-date=$BUILD_DATE \
-      org.label-schema.vcs-url="https://github.com/linuxjuggler/php-7.2-xdebug-alpine.git" \
+      org.label-schema.vcs-url="https://github.com/linuxjuggler/php-xdebug-alpine" \
       org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.schema-version="1.0.0"
 

@@ -8,7 +8,7 @@ TAG=${TAG:=latest}
 
 export COMMIT_HASH=`git rev-parse --short HEAD`
 
-export IMAGE=zaherg/php-7.1-xdebug-alpine
+export IMAGE=zaherg/php-xdebug-alpine
 
 export IMAGE_COMMIT=$IMAGE:$TAG-$COMMIT_HASH
 
