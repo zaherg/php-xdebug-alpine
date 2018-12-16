@@ -7,6 +7,7 @@ This image contain PHP 7.x based on alpine with xDebug, MySQL, PostgreSQL, Redis
 
 ## Runing the image:
 
+### Configuring xDebug
 By default xdebug is enabled, to disable it you need to create a `.env` file which should contain the following variables, but remember to change the value based one what you want to achieve:
 
 ```
@@ -19,6 +20,17 @@ PHP_XDEBUG_REMOTE_CONNECT_BACK=0
 PHP_XDEBUG_IDEKEY=docker
 PHP_XDEBUG_PROFILER_ENABLE=0
 PHP_XDEBUG_PROFILER_OUTPUT_DIR=/tmp
+```
+
+### Configuring OPCache
+
+By default OPCache is enabled, to disable it you need to create a `.env` file which should contain the following variables, but remember to change the value based one what you want to achieve:
+
+```
+PHP_OPCACHE_VALIDATE_TIMESTAMPS=0
+PHP_OPCACHE_MAX_ACCELERATED_FILES=10000
+PHP_OPCACHE_MEMORY_CONSUMPTION=192
+PHP_OPCACHE_MAX_WASTED_PERCENTAGE=10
 ```
 
 Then run the docker and specify the env file that you have created like this

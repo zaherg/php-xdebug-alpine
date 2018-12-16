@@ -39,7 +39,8 @@ RUN set -ex \
     && apk del build-dependencies \
     && rm -rf /tmp/* 
 
-COPY xdebug.ini /usr/local/etc/php/conf.d/xdebug-dev.ini
+COPY conf.d/xdebug.ini /usr/local/etc/php/conf.d/xdebug-dev.ini
+COPY conf.d/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 
 USER www-data
 
