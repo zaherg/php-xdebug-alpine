@@ -13,6 +13,6 @@ jobs:
     - name: Build the Docker image
       run: |
       sh 7.1/build 7.1
-      sh 7.2/build 7.2
-      sh 7.3/build 7.3
-      sh 7.3/build latest
+#       sh 7.2/build 7.2
+#       sh 7.3/build 7.3
+#       sh 7.3/build latest
