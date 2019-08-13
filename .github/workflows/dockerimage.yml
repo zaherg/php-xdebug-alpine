@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@master
     - name: Build the Docker image
       run: |
-        docker build ./7.1 --file Dockerfile --tag zaherg/php-xdebug-alpine:7.1
+        docker build . --file ./7.1/Dockerfile --tag zaherg/php-xdebug-alpine:7.1
         sh ./7.1/build 7.1
         sh ./7.2/build 7.2
         sh ./7.3/build 7.3
